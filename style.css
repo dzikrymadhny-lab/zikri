@@ -1,0 +1,259 @@
+/* Basic Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e; /* Dark purple background */
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+/* Header & Navigation */
+.header {
+    background-color: #162447;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #e0b0ff;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: block;
+}
+
+.nav-menu {
+    list-style: none;
+    display: none; /* Hidden by default for mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #162447;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 10px 0;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #2e0c4f; /* A darker purple */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%232e0c4f" fill-opacity="1" d="M0,192L60,186.7C120,181,240,171,360,186.7C480,203,600,245,720,245.3C840,245,960,203,1080,197.3C1200,192,1320,224,1380,240L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>'); /* Example of a subtle background pattern */
+}
+
+.hero-content {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 5px;
+}
+
+.hero-content .role {
+    font-size: 1.5em;
+    color: #e0b0ff;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d11c5f;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff3377;
+}
+
+/* About Section */
+.about-section {
+    background-color: #162447;
+}
+
+/* Education & Experience Section */
+.education-experience-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.education-experience-section .column {
+    flex: 1 1 45%;
+}
+
+.timeline {
+    list-style: none;
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 2px;
+    height: 100%;
+    background-color: #d11c5f;
+}
+
+.timeline li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.timeline-dot {
+    width: 15px;
+    height: 15px;
+    background-color: #e0b0ff;
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    top: 5px;
+}
+
+.timeline-content h3 {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/* Technology Section */
+.tech-section {
+    background-color: #1a1a2e;
+    text-align: center;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.tech-icons img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.tech-icons img:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #162447;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background-color: #3e2652;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    max-width: 300px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #4b3263;
+}
+
+.contact-item i {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+/* Mobile-first adjustments */
+@media (min-width: 768px) {
+    .hamburger-menu {
+        display: none;
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+    .nav-menu li {
+        margin: 0 15px;
+    }
+    .education-experience-section .container {
+        flex-direction: row;
+    }
+}
